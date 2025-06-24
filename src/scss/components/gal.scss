@@ -1,0 +1,42 @@
+.gal {
+  &W {
+    background: url('@img/gal/bg.png') no-repeat center center / cover;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }
+&Slider {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  margin-left: -25px;
+  padding-right: 10px;
+  margin-right: -10px;
+
+  .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+  }
+}
+  &Slide {
+    img {
+      height: 297px;
+      width: 100%;
+      object-fit: cover;
+      border: 15px solid rgba(243, 147, 20, 1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      transition: opacity .2s linear;
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}
+.galSliderW{
+  margin-bottom: -33px;
+  position: relative;
+}

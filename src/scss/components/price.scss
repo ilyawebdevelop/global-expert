@@ -1,0 +1,72 @@
+.priceMain {
+  background-image: url('@img/price/price-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  &Title {
+    font-size: 92px;
+    line-height: 120%;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  &Subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  &List {
+    margin-top: 25px;
+    margin-bottom: 35px;
+    ul {
+      li {
+        margin-bottom: 15px;
+        display: flex;
+        position: relative;
+        column-gap: 6px;
+        align-items: center;
+        &::before {
+          content: '';
+          width: 22px;
+          height: 22px;
+          background: url('@img/icons/checkbox.png') no-repeat center center / contain;
+          display: flex;
+        }
+      }
+    }
+    &Name {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+  .container {
+    position: relative;
+    padding-bottom: 100px;
+    padding-top: 70px;
+  }
+  .pricePhone {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    width: 435px;
+  }
+  .priceInnerPhone {
+    position: absolute;
+    right: 183px;
+    bottom: 130px;
+    width: 205px;
+    z-index: 1;
+  }
+  .pricePhoneBg {
+    position: absolute;
+    right: 172px;
+    width: 229px;
+    bottom: 76px;
+  }
+}
+.priceMainSocialsText {
+  font-size: 10px;
+  line-height: 12px;
+  max-width: 195px;
+  text-align: center;
+}

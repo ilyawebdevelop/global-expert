@@ -1,0 +1,69 @@
+.services {
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 25px;
+  }
+
+  &Card {
+    grid-column: 4 span;
+    border-radius: 20px;
+    padding: 40px 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: rgba(25,56,77,0.69);
+      border-radius: 20px;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: rgb(253, 181, 85);
+      text-align: center;
+      margin-bottom: 15px;
+      min-height: 60px;
+      position: relative;
+      z-index: 1;
+      width: fit-content;
+      a {
+        text-align: center;
+        &:hover {
+          color: #FF9800;
+        }
+      }
+    }
+    &Descr {
+      color: #fff;
+      font-weight: 500;
+      text-align: center;
+      display: block;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 20px;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-color: transparent;
+      transition: text-decoration-color .2s linear;
+      &:hover {
+        text-decoration-color: #fff;
+        text-decoration: underline;
+      }
+    }
+    .button {
+      position: relative;
+     font-size: 18px;
+      z-index: 1;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: auto;
+    }
+  }
+}

@@ -1,0 +1,177 @@
+.sphere {
+  &W {
+    background-color: rgba(25, 56, 78, 1);
+    border-radius: 20px;
+    padding: 30px 30px 60px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: -4px;
+      height: 8px;
+      background-color: rgba(243, 147, 20, 1);
+      width: 230px;
+      border-radius: 6px;
+    }
+  }
+
+  &Dir {
+    display: flex;
+
+    &Image {
+      flex-shrink: 0;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: -10px;
+        height: calc(100% - 15px);
+        width: 200px;
+        background-color: var(--orange);
+        border-radius: 8px;
+      }
+
+      img {
+        width: 620px;
+        border-radius: 8px;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    &Content {
+      color: #fff;
+      padding-left: 30px;
+
+      p {
+        text-align: center;
+      }
+
+      h3 {
+        color: #fff;
+        font-size: 16px;
+        padding-bottom: 30px;
+        position: relative;
+        text-align: center;
+
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: -30px;
+          bottom: 15px;
+          height: 3px;
+          width: calc(100% + 30px);
+          background-color: var(--orange);
+        }
+      }
+    }
+  }
+
+  &Item {
+    &--lg {
+      font-size: 22px;
+      text-align: center;
+
+    }
+
+    strong {
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 16px;
+      padding-bottom: 20px;
+      position: relative;
+      margin-top: 15px;
+      width: fit-content;
+
+      &::before {
+        content: '';
+        height: 3px;
+        width: 100%;
+        background-color: var(--orange);
+        position: absolute;
+        bottom: 8px;
+      }
+    }
+
+    &--bg {
+      background: url('@img/sphere/bg.jpg') no-repeat center center / cover;
+    }
+
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    border-radius: 6px;
+
+    &W {
+      border-radius: 8px;
+      color: #fff;
+      max-width: 790px;
+      position: relative;
+
+      &.rect {
+        &::after {
+          content: '';
+          position: absolute;
+          width: 300px;
+          height: 100%;
+          right: -80px;
+          bottom: -15px;
+          background-color: var(--orange);
+          border-radius: 6px;
+        }
+      }
+
+
+      &-rect-l {
+        margin-left: auto;
+
+        &::after {
+          right: unset;
+          left: -80px;
+        }
+      }
+    }
+
+    p {
+      position: relative;
+      z-index: 1;
+    }
+
+    ul {
+      position: relative;
+      z-index: 1;
+    }
+
+
+  }
+}
+
+.sphereLogoW {
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  text-align: center;
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+}
+
+.sphereLogoDescr {
+  margin-top: 15px;
+}

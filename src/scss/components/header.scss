@@ -1,0 +1,93 @@
+// Header
+.header {
+  &T {
+    &W {
+      display: flex;
+      align-items: center;
+      column-gap: 45px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    a {
+      &:hover {
+        color: var(--orange);
+      }
+    }
+  }
+  &B {
+    background-color: #19384E;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #F39314;
+    &W {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 50px;
+    }
+  }
+  &Logo {
+    flex-shrink: 0;
+    img {
+      width: 200px;
+    }
+    &Descr {
+      max-width: 245px;
+    }
+  }
+  &Time {
+    display: flex;
+    flex-direction: column;
+  }
+  &Phone {
+    &W {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &Address {
+    &W {
+      max-width: 200px;
+    }
+  }
+  &Nav {
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        &.has-sub-menu {
+          &>a {
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            &:hover {
+              &:after {
+                background: url('@img/icons/arrow-down-orange.svg') no-repeat center center / 10px;
+              }
+            }
+            &::after {
+              content: '';
+              width: 10px;
+              height: 5px;
+              background: url('@img/icons/arrow-down.svg') no-repeat center center / 10px;
+              display: block;
+              position: relative;
+              top: 2px;
+              transition: background .2s linear;
+            }
+          }
+        }
+        a {       
+          padding: 10px 25px;
+          border-radius: 10px;
+          transition: background .1s linear, color .2s linear;
+          color: #F4F4F4;       
+          &:hover {
+            background: rgba(243, 147, 20, 0.19);
+            color: #f39f2f;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.reviews {
+  &W {
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 30px 40px;
+    position: relative;
+    display: flex;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 6px;
+      width: 232px;
+      background-color: rgb(243, 147, 20);
+      border-radius: 6px;
+    }
+  }
+
+  .h2 {
+    padding-bottom: 20px;
+    position: relative;
+    margin-bottom: 25px;
+
+    &::after {
+      content: '';
+      height: 2px;
+      width: 160px;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      background-color: rgba(243, 147, 20, 1);
+    }
+  }
+
+  .socials {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    ul {
+      display: flex;
+      column-gap: 20px;
+
+      li {
+        a {
+          img {
+            width: 42px;
+          }
+        }
+      }
+    }
+  }
+
+  &Content {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    width: 350px;
+    flex-shrink: 0;
+
+    p {
+      max-width: 350px;
+      font-size: 18px;
+    }
+  }
+
+  &More {
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(243, 147, 20, 1);
+    font-size: 18px;
+  }
+
+  &Img {
+    &W {
+      position: relative;
+      width: 100%;
+
+      .imgL {
+        position: absolute;
+        left: 155px;
+        bottom: 0;
+        z-index: 0;
+
+        .phoneBg {
+          width: 215px;
+        }
+
+        .phoneInner {
+          position: absolute;
+          left: 13px;
+          margin: auto;
+          top: 49px;
+          width: 202px;
+        }
+      }
+
+      .imgC {
+        position: absolute;
+        left: 327px;
+        bottom: 0;
+        z-index: 1;
+
+        .phoneBg {
+          width: 255px;
+        }
+
+        .phoneInner {
+          position: absolute;
+          left: 13px;
+          margin: auto;
+          top: 68px;
+          width: 229px;
+        }
+      }
+
+      .imgR {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+
+        .phoneBg {
+          width: 215px;
+        }
+
+        .phoneInner {
+          position: absolute;
+          left: -1px;
+          margin: auto;
+          top: 49px;
+          width: 202px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+.expert {
+  &W {
+    background-color: rgba(25, 56, 78, 1);
+    border-radius: 20px;
+    padding: 30px 30px 60px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: -4px;
+      height: 8px;
+      background-color: rgba(243, 147, 20, 1);
+      width: 230px;
+      border-radius: 6px;
+    }
+  }
+
+  &Image {
+    &.rect {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 50%;
+        background-color: var(--orange);
+
+      }
+
+      &.rect-b {
+        &::before {
+          width: calc(100% + 20px);
+          left: -10px;
+          right: 0;
+          margin: auto;
+          bottom: -10px;
+          border-radius: 8px;
+        }
+      }
+
+      &.rect-t-l {
+        &::before {
+          width: 50%;
+          left: -10px;
+          top: -10px;
+          border-radius: 8px;
+        }
+      }
+
+      &.rect-b-l {
+        &::before {
+          width: 50%;
+          left: -10px;
+          bottom: -10px;
+          border-radius: 8px;
+        }
+      }
+
+      &.rect-b-r {
+        &::before {
+          width: 50%;
+          right: -10px;
+          bottom: -10px;
+          border-radius: 8px;
+        }
+      }
+
+      &.rect-c-l {
+        &::before {
+          width: 50%;
+          left: -10px;
+          top: 50%;
+          transform: translateY(-50%);
+          border-radius: 8px;
+        }
+      }
+
+      &.rect-c-r {
+        &::before {
+          width: 50%;
+          right: -10px;
+          top: 50%;
+          transform: translateY(-50%);
+          border-radius: 8px;
+        }
+      }
+    }
+
+    &.sphere {
+   
+      &.sphere-b-l {
+        &::after {
+          left: -10px;
+        }
+
+      }
+
+      &.sphere-b-r {
+        &::after {
+          right: -10px;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        width: 80%;
+        height: 200px;
+        background: url('@img/sphere/bg.jpg') no-repeat center center / cover;
+        border-radius: 8px;
+      }
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 40px;
+    row-gap: 40px;
+
+    .col-5 {
+      grid-column: 5 span;
+    }
+
+    .col-6 {
+      grid-column: 6 span;
+    }
+
+    .col-7 {
+      grid-column: 7 span;
+    }
+
+    .col-12 {
+      grid-column: 12 span;
+    }
+  }
+}

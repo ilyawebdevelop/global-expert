@@ -1,0 +1,82 @@
+.adv {
+  .sectHead {
+    margin-bottom: 20px;
+  }
+  &W {
+    display: flex;
+    column-gap: 30px;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 26px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 6px;
+      width: 232px;
+      background-color: rgba(243,147,20,1);
+      border-radius: 6px;
+    }
+  }
+  &Logo {
+    width: 40px;
+    flex-shrink: 0;
+  }
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 50px;
+    row-gap: 30px;
+    padding-left: 50px;
+    width: 100%;
+  }
+  &Item {
+    grid-column: 6 span;
+    display: flex;
+    column-gap: 30px;
+    &Count {
+      font-size: 100px;
+      line-height: 140%;
+      color: rgb(243, 147, 20);
+      font-weight: 800;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 43px;
+        height: 105px;
+        background-color: rgba(25,56,78,1);
+        top: 50%;
+        right: -18px;
+        transform: translateY(-50%);
+      }
+      span {
+        position: relative;
+        z-index: 1;
+        bottom: 3px;
+      }
+    }
+    &Content {
+      padding-top: 12px;
+      h3 {
+        color: rgb(243, 147, 20);
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      .advItemDescr {
+        max-width: 350px;
+      }
+    }
+  }
+}
+.advLogoAbsolut {
+  width: 620px;
+  position: absolute;
+  left: 200px;
+  top: 50%;
+  transform: translateY(-50%);
+}
