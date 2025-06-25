@@ -1,0 +1,176 @@
+.oborIntroImg {
+  background-color: rgba(243, 147, 20, 1);
+  width: fit-content;
+  padding: 20px 40px;
+  border-radius: 6px;
+  position: relative;
+  top: 40px;
+
+  img {
+    &:nth-child(1) {
+      max-width: 245px;
+      margin-bottom: 10px;
+    }
+
+    &:nth-child(2) {
+      max-width: 282px;
+    }
+  }
+}
+
+.oborIntro {
+  background-color: rgba(25, 56, 78, 1);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  column-gap: 30px;
+  padding-left: 50px;
+  padding-top: 0;
+  margin-bottom: 70px;
+
+  &Content {
+    padding-top: 80px;
+    padding-bottom: 50px;
+
+    p {
+      color: #fff;
+      padding-right: 55px;
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 16px;
+      line-height: normal;
+      padding-bottom: 30px;
+      position: relative;
+      padding-right: 55px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 15px;
+        left: -30px;
+        width: calc(100% + 30px);
+        background-color: var(--orange);
+        height: 3px;
+      }
+    }
+  }
+}
+
+.oborW {
+  padding: 40px 50px;
+  background-color: rgba(25, 56, 78, 1);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.oborGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
+}
+
+.oborCard {
+  grid-column: 4 span;
+  display: flex;
+  flex-direction: column;
+
+  &:nth-child(3n+1) {
+    .oborCardImg {
+      margin-right: auto;
+    }
+  }
+
+  &:nth-child(3n + 2) {
+    .oborCardImg {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &:nth-child(3n + 3) {
+    .oborCardImg {
+      margin-left: auto;
+    }
+  }
+
+  &Img {
+    position: relative;
+    width: fit-content;
+    display: block;
+    max-width: calc(100% - 50px);
+    width: 100%;
+
+    img {
+      width: 100%;
+      border-radius: 6px;
+
+    }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &:before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url('@img/icons/zoom.svg') no-repeat center center / contain;
+      content: '';
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 2;
+      transition: opacity .2s linear, visibility .2s linear;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: rgba($color: #000000, $alpha: .5);
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1;
+      transition: opacity .2s linear, visibility .2s linear;
+      border-radius: 6px;
+    }
+  }
+
+  &Content {
+    margin-top: 15px;
+    background-color: var(--orange);
+    padding: 15px;
+    border-radius: 6px;
+    flex: 1;
+
+    h3 {
+      color: #fff;
+      font-weight: 700;
+      font-size: 19px;
+    }
+
+    p {
+      color: #fff;
+      margin-top: 20px;
+    }
+  }
+}

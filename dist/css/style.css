@@ -4289,6 +4289,154 @@ h3.text-white,
   transition: opacity 0.2s linear, visibility 0.2s linear;
 }
 
+.oborIntroImg {
+  background-color: rgb(243, 147, 20);
+  width: fit-content;
+  padding: 20px 40px;
+  border-radius: 6px;
+  position: relative;
+  top: 40px;
+}
+.oborIntroImg img:nth-child(1) {
+  max-width: 245px;
+  margin-bottom: 10px;
+}
+.oborIntroImg img:nth-child(2) {
+  max-width: 282px;
+}
+
+.oborIntro {
+  background-color: rgb(25, 56, 78);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  column-gap: 30px;
+  padding-left: 50px;
+  padding-top: 0;
+  margin-bottom: 70px;
+}
+.oborIntroContent {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.oborIntroContent p {
+  color: #fff;
+  padding-right: 55px;
+}
+.oborIntroContent h3 {
+  color: #fff;
+  font-size: 16px;
+  line-height: normal;
+  padding-bottom: 30px;
+  position: relative;
+  padding-right: 55px;
+}
+.oborIntroContent h3::after {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: -30px;
+  width: calc(100% + 30px);
+  background-color: var(--orange);
+  height: 3px;
+}
+
+.oborW {
+  padding: 40px 50px;
+  background-color: rgb(25, 56, 78);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.oborGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
+}
+
+.oborCard {
+  grid-column: 4 span;
+  display: flex;
+  flex-direction: column;
+}
+.oborCard:nth-child(3n+1) .oborCardImg {
+  margin-right: auto;
+}
+.oborCard:nth-child(3n+2) .oborCardImg {
+  margin-left: auto;
+  margin-right: auto;
+}
+.oborCard:nth-child(3n+3) .oborCardImg {
+  margin-left: auto;
+}
+.oborCardImg {
+  position: relative;
+  width: fit-content;
+  display: block;
+  max-width: calc(100% - 50px);
+  width: 100%;
+}
+.oborCardImg img {
+  width: 100%;
+  border-radius: 6px;
+}
+.oborCardImg:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+.oborCardImg:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+.oborCardImg::before {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url("../img/icons/zoom.svg") no-repeat center center/contain;
+  content: "";
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+.oborCardImg::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+  border-radius: 6px;
+}
+.oborCardContent {
+  margin-top: 15px;
+  background-color: var(--orange);
+  padding: 15px;
+  border-radius: 6px;
+  flex: 1;
+}
+.oborCardContent h3 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 19px;
+}
+.oborCardContent p {
+  color: #fff;
+  margin-top: 20px;
+}
+
 .footer {
   background-color: #19384e;
   padding-top: 40px;
